@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://bedd01u0u7xeo"]
+
+[ext_resource type="Script" uid="uid://du2n35xebi44k" path="res://system/environment/pressure_switch.gd" id="1_5624g"]
+[ext_resource type="Texture2D" uid="uid://cdu2nc63vyycs" path="res://content/map/TilesetDungeon.png" id="2_wahuu"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5xvmq"]
+
+[node name="PressureSwitch" type="Node2D" unique_id=1272802754]
+script = ExtResource("1_5624g")
+
+[node name="Visual" type="Sprite2D" parent="." unique_id=1505470602]
+texture = ExtResource("2_wahuu")
+hframes = 12
+vframes = 4
+frame = 14
+
+[node name="Detector" type="Area2D" parent="." unique_id=304976394]
+collision_layer = 0
+collision_mask = 8
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Detector" unique_id=2078631581]
+shape = SubResource("RectangleShape2D_5xvmq")

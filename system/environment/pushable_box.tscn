@@ -1,0 +1,46 @@
+[gd_scene format=3 uid="uid://cebrox75i2ok"]
+
+[ext_resource type="Script" uid="uid://bq004ofc7kl6y" path="res://system/environment/pushable_box.gd" id="1_d0su3"]
+[ext_resource type="Texture2D" uid="uid://ww3ylghfa60s" path="res://content/destroyable/crate.png" id="2_nxx7j"]
+[ext_resource type="Script" uid="uid://cxesnpebg53yb" path="res://system/damage/hitbox.gd" id="3_6koii"]
+[ext_resource type="Script" uid="uid://dc5766v6db5ax" path="res://system/damage/resource_damage_team.gd" id="4_yrj4k"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_nxx7j"]
+size = Vector2(10, 10)
+
+[sub_resource type="Resource" id="Resource_r2twj"]
+script = ExtResource("4_yrj4k")
+metadata/_custom_type_script = "uid://dc5766v6db5ax"
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_08lns"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_nxx7j"]
+radius = 2.5
+
+[node name="PushableBox" type="CharacterBody2D" unique_id=121113102]
+collision_layer = 10
+collision_mask = 9
+script = ExtResource("1_d0su3")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=375508203]
+z_index = 1
+texture = ExtResource("2_nxx7j")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=645341962]
+shape = SubResource("RectangleShape2D_nxx7j")
+
+[node name="Hitbox" type="Area2D" parent="." unique_id=216487766]
+collision_layer = 4
+collision_mask = 0
+monitoring = false
+script = ExtResource("3_6koii")
+team = SubResource("Resource_r2twj")
+metadata/_custom_type_script = "uid://cxesnpebg53yb"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hitbox" unique_id=613225356]
+shape = SubResource("CircleShape2D_08lns")
+
+[node name="ShapeCast" type="ShapeCast2D" parent="." unique_id=1026715412]
+shape = SubResource("CircleShape2D_nxx7j")
+target_position = Vector2(0, 0)
+collision_mask = 8

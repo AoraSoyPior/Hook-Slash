@@ -1,0 +1,32 @@
+[gd_scene format=3 uid="uid://skrlnoimlhsv"]
+
+[ext_resource type="Script" uid="uid://bjyx155htjy50" path="res://system/character/character.gd" id="1_mutlb"]
+[ext_resource type="Script" uid="uid://cxesnpebg53yb" path="res://system/damage/hitbox.gd" id="2_a7as0"]
+[ext_resource type="Script" uid="uid://dc5766v6db5ax" path="res://system/damage/resource_damage_team.gd" id="3_05lyq"]
+[ext_resource type="Texture2D" uid="uid://btryd5g3oajow" path="res://content/character/Shadow.png" id="4_7icv6"]
+[ext_resource type="Script" uid="uid://basmbrvb5u3ra" path="res://system/character/sprite_character.gd" id="6_s08pp"]
+
+[sub_resource type="Resource" id="Resource_3y32p"]
+script = ExtResource("3_05lyq")
+
+[node name="Character" type="CharacterBody2D" unique_id=2031289466]
+collision_layer = 2
+collision_mask = 3
+motion_mode = 1
+script = ExtResource("1_mutlb")
+
+[node name="Hitbox" type="Area2D" parent="." unique_id=1462059000]
+collision_layer = 8
+collision_mask = 0
+monitoring = false
+script = ExtResource("2_a7as0")
+team = SubResource("Resource_3y32p")
+
+[node name="Shadow" type="Sprite2D" parent="." unique_id=799915464]
+texture = ExtResource("4_7icv6")
+
+[node name="Sprite" type="Sprite2D" parent="." unique_id=705956485]
+offset = Vector2(0, -6)
+hframes = 4
+vframes = 7
+script = ExtResource("6_s08pp")

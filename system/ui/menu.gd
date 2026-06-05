@@ -25,4 +25,4 @@ func _on_reiniciar_pressed() -> void:
 
 
 func _on_salir_pressed() -> void:
-	get_tree().change_scene_to_file("res://content/ui/main_menu/main_menu.tscn")
+	get_tree().quit()

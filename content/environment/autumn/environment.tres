@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="ResourceEnvironment" format=3 uid="uid://dkwnklyceey24"]
+
+[ext_resource type="AudioStream" uid="uid://c7vlu3uu47bb5" path="res://audio/music/theme_dream.ogg" id="1_7mqw8"]
+[ext_resource type="Script" uid="uid://bhl83vapqvd2c" path="res://system/environment/resource_environment.gd" id="3_uc4sw"]
+
+[resource]
+script = ExtResource("3_uc4sw")
+music = ExtResource("1_7mqw8")
+meteo_list = Array[int]([3, 4])

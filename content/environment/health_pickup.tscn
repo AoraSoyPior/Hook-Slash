@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://dp2jktyafpa6h"]
+
+[ext_resource type="Script" uid="uid://d34rtls2k1uxi" path="res://content/environment/health_pickup.gd" id="1_g0wld"]
+[ext_resource type="Texture2D" uid="uid://vkippln3yjal" path="res://content/environment/Heart.png" id="2_pi400"]
+[ext_resource type="AudioStream" uid="uid://cu0t2o21smv4p" path="res://audio/sounds/Heal.wav" id="3_p6kgt"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_pi400"]
+
+[node name="HealthPickup" type="Area2D" unique_id=1829682897]
+collision_mask = 2
+script = ExtResource("1_g0wld")
+heal_amount = null
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=146579698]
+texture = ExtResource("2_pi400")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2042534659]
+shape = SubResource("RectangleShape2D_pi400")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=937908696]
+stream = ExtResource("3_p6kgt")

@@ -1,0 +1,98 @@
+[gd_scene format=3 uid="uid://dqyt2aiirvl1j"]
+
+[ext_resource type="Script" uid="uid://boom4f1ai8x1w" path="res://content/ui/main_menu/victory_screen.gd" id="1_bs1rg"]
+[ext_resource type="Theme" uid="uid://dx4r0mviklhsx" path="res://theme/theme_1/theme_1.tres" id="1_o7qpy"]
+[ext_resource type="AudioStream" uid="uid://bfrmsrr8myj2i" path="res://audio/music/8 - End Theme.ogg" id="3_eyy6f"]
+
+[node name="VictoryScreen" type="CanvasLayer" unique_id=1475000048]
+process_mode = 3
+script = ExtResource("1_bs1rg")
+
+[node name="Panel" type="Panel" parent="." unique_id=1395550317]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -296.0
+offset_top = -280.0
+offset_right = 296.0
+offset_bottom = 280.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_o7qpy")
+
+[node name="Titulo" type="Label" parent="Panel" unique_id=433070904]
+layout_mode = 0
+offset_left = 64.0
+offset_top = 64.0
+offset_right = 528.0
+offset_bottom = 122.0
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 20
+text = "GAME   OVER"
+horizontal_alignment = 1
+
+[node name="NickLabel" type="Label" parent="Panel" unique_id=127378521]
+layout_mode = 0
+offset_left = 64.0
+offset_top = 126.0
+offset_right = 528.0
+offset_bottom = 184.0
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 20
+horizontal_alignment = 1
+
+[node name="ScoreLabel" type="Label" parent="Panel" unique_id=1063361136]
+layout_mode = 0
+offset_left = 64.0
+offset_top = 188.0
+offset_right = 528.0
+offset_bottom = 246.0
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 20
+horizontal_alignment = 1
+
+[node name="KillsLabel" type="Label" parent="Panel" unique_id=1900627965]
+layout_mode = 0
+offset_left = 64.0
+offset_top = 250.0
+offset_right = 528.0
+offset_bottom = 309.0
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 20
+horizontal_alignment = 1
+
+[node name="BestLabel" type="Label" parent="Panel" unique_id=1341165090]
+layout_mode = 0
+offset_left = 64.0
+offset_top = 313.0
+offset_right = 528.0
+offset_bottom = 371.0
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 20
+horizontal_alignment = 1
+
+[node name="MenuButton" type="Button" parent="Panel" unique_id=1724859227]
+layout_mode = 0
+offset_left = 56.0
+offset_top = 432.0
+offset_right = 280.0
+offset_bottom = 490.0
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 20
+text = "MENU"
+
+[node name="RestartButton" type="Button" parent="Panel" unique_id=1744107218]
+layout_mode = 0
+offset_left = 296.0
+offset_top = 432.0
+offset_right = 528.0
+offset_bottom = 491.0
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 20
+text = "REINICIAR"
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=264570822]
+stream = ExtResource("3_eyy6f")
+volume_db = -10.0

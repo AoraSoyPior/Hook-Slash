@@ -1,0 +1,54 @@
+[gd_scene format=3 uid="uid://dck3a1et5yeud"]
+
+[ext_resource type="Script" uid="uid://nvcltmonw2i2" path="res://system/ui/menu.gd" id="1_bg36k"]
+[ext_resource type="Theme" uid="uid://dx4r0mviklhsx" path="res://theme/theme_1/theme_1.tres" id="1_kpkak"]
+
+[node name="Menu" type="Control" unique_id=1148950877]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_bg36k")
+
+[node name="Panel" type="Panel" parent="." unique_id=61976285]
+layout_mode = 0
+offset_left = 96.0
+offset_top = 16.0
+offset_right = 256.0
+offset_bottom = 160.0
+theme = ExtResource("1_kpkak")
+
+[node name="MarginContainer" type="MarginContainer" parent="Panel" unique_id=226156391]
+layout_mode = 1
+offset_left = 16.0
+offset_top = 16.0
+offset_right = 97.0
+offset_bottom = 117.0
+scale = Vector2(1.5592598, 1.5592598)
+theme = ExtResource("1_kpkak")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel/MarginContainer" unique_id=1232499073]
+layout_mode = 2
+
+[node name="Reanudar" type="Button" parent="Panel/MarginContainer/VBoxContainer" unique_id=27286007]
+layout_mode = 2
+theme_override_font_sizes/font_size = 10
+text = "REANUDAR
+"
+
+[node name="Reiniciar" type="Button" parent="Panel/MarginContainer/VBoxContainer" unique_id=1983057817]
+layout_mode = 2
+theme_override_font_sizes/font_size = 10
+text = "REINICIAR"
+
+[node name="Salir" type="Button" parent="Panel/MarginContainer/VBoxContainer" unique_id=494581031]
+process_mode = 3
+layout_mode = 2
+theme_override_font_sizes/font_size = 10
+text = "SALIR"
+
+[connection signal="pressed" from="Panel/MarginContainer/VBoxContainer/Reanudar" to="." method="_on_reanudar_pressed"]
+[connection signal="pressed" from="Panel/MarginContainer/VBoxContainer/Reiniciar" to="." method="_on_reiniciar_pressed"]
+[connection signal="pressed" from="Panel/MarginContainer/VBoxContainer/Salir" to="." method="_on_salir_pressed"]

@@ -1,0 +1,42 @@
+[gd_scene format=3 uid="uid://ck8bsyolnkr5h"]
+
+[ext_resource type="Script" uid="uid://crch82nqup10m" path="res://system/ui/player_ui.gd" id="1_ky034"]
+[ext_resource type="Script" uid="uid://cmsjxfk7slkw6" path="res://system/ui/receptacle_bar/receptacle_bar.gd" id="2_63s4t"]
+[ext_resource type="Texture2D" uid="uid://dy3wbh3kmrlpc" path="res://content/ui/heart.png" id="3_ef262"]
+[ext_resource type="Theme" uid="uid://dx4r0mviklhsx" path="res://theme/theme_1/theme_1.tres" id="4_uwbna"]
+[ext_resource type="Script" uid="uid://b4mijt6ktrtoh" path="res://system/ui/score_ui.gd" id="4_vkbqd"]
+
+[node name="PlayerUi" type="Control" unique_id=292655858]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+mouse_filter = 2
+script = ExtResource("1_ky034")
+
+[node name="ReceptacleBar" type="Control" parent="." unique_id=38871276]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(48, 16)
+anchors_preset = 0
+offset_left = 3.0
+offset_top = 3.0
+offset_right = 51.0
+offset_bottom = 19.0
+mouse_filter = 2
+script = ExtResource("2_63s4t")
+max_life = 12
+life = 12
+texture = ExtResource("3_ef262")
+
+[node name="ScoreUI" type="Label" parent="." unique_id=1229550034]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = 232.0
+offset_right = 272.0
+offset_bottom = 23.0
+grow_horizontal = 0
+theme = ExtResource("4_uwbna")
+horizontal_alignment = 2
+script = ExtResource("4_vkbqd")
